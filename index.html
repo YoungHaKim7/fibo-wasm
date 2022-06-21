@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-    <title></title>
+    <title>fibonacci wasm</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
+    <h1>hello world__ fibonacci wasm</h1>
     <script type="module">
         main()
 
@@ -16,7 +17,7 @@
             const wasm = await import('/pkg/fibo_wasm.js')
             await wasm.default('/pkg/fibo_wasm_bg.wasm')
             console.time("rust")
-            console.log(wasm.fib(40))
+            console.log(wasm.fib(44))
             console.timeEnd("rust")
         }
 
@@ -27,7 +28,7 @@
         }
         function fibonacciTime() {
             console.time("js")
-            fibonacci(40)
+            fibonacci(44)
             console.timeEnd("js")
         }
         fibonacciTime()
