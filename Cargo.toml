@@ -1,0 +1,14 @@
+[package]
+name = "fibo-wasm"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+crate-type = ["cdylib"]
+path = "src/main.rs"
+
+[dependencies]
+wasm-bindgen = "0.2.48"
+chrono = "0.4.19"
